@@ -29,6 +29,9 @@ body
   display: flex
   min-height: 100vh
   flex-direction: column
+  padding-top: 50px
+  @media (min-width: $size-tablet)
+    padding-top: 0
 
 body > main
   flex: 1
@@ -43,6 +46,13 @@ body > main
 
 .site-nav
   @include navbar()
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: white
+  @media (min-width: $size-tablet)
+    position: static
 
 .site-nav
   border: 0
@@ -72,6 +82,12 @@ body > main
         + a
           display: inline-block
 
+.disclosed
+  @media (max-width: $size-tablet)
+    display: none
+    &.show
+      display: list-item
+
 // CONTENT
 
 .site-title
@@ -100,6 +116,12 @@ ul.posts
       display: block
     .post-date
       font-size: 75%
+.menu-link
+  position: fixed
+  top: $navbarPadding
+  right: $navbarPadding
+  @media (min-width: $size-tablet)
+    display: none
 
 
 // ONE OFF NONSENSE
