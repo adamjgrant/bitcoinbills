@@ -1,0 +1,91 @@
+// ---
+// ---
+
+// Uncomment above when Jekyll has been updated.
+@import _normalize
+@import _variables
+@import _mixins
+
+*
+  box-sizing: border-box
+
+// TYPOGRAPHY
+h1, h2, h3
+  font-family: $font-headings
+  font-weight: bold
+h4, h5
+  font-family: $font-paragraph
+  font-weight: bold
+a
+  color: $blue
+  text-decoration: none
+
+// WRAPPING
+body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+body > main
+  flex: 1
+
+.wrapper
+  width: 100%
+  max-width: 1000px
+  padding: 15px
+  margin: 0px auto
+
+// NAVIGATION
+
+.site-nav
+  @include navbar()
+
+.site-nav
+  border: 0
+  border-bottom: 1px solid #AAA
+
+.row, .site-footer
+  @include row()
+
+.site-footer
+  border-top: 1px solid #AAA
+  .about, .links
+    padding-top: 15px
+    @include col(12)
+  .about
+    @include col(6, $size-tablet)
+  .links
+    @include col(3, $size-tablet)
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      .icon svg
+        width: 25px
+        height: 25px
+        vertical-align: middle
+        display: inline-block
+        + a
+          display: inline-block
+
+// CONTENT
+
+.site-title
+  text-align: center
+  @media (min-width: $size-laptop)
+    text-align: left
+
+.home
+  .bills
+    @include col(12)
+    @include col(6, $size-tablet)
+    @include col(2, $size-laptop)
+  article
+    @include col(12)
+    @include col(6, $size-tablet)
+    @include col(10, $size-laptop)
+
+// ONE OFF NONSENSE
+
+.github iframe
+  margin-top: 20px !important
