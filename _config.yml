@@ -1,8 +1,10 @@
 # Site settings
-name: Dat site title tho
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+name: Denominational Bitcoin Wallets
+title: Denominational Bitcoin Wallets
+email: ajkochanowicz@gmail.co
+description: Printable Bitcoin Wallets in fixed denominations set in beautiful design.
+username: ajkochanowicz
+twitter_username: yourwebsitesUX
 # Once Github updates to Jekyll 2, change baseurl to ""
 baseurl: "/bitcoinbills"
 url: "http://ajkochanowicz.github.io/bitcoinbills/"

@@ -1,20 +1,40 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home">
+<section class="home">
 
-  <h1>Posts</h1>
+  <h1 class="site-title">{{ site.title }}</h1>
+  <div class="row">
+    <article>
+      <h1 class="lead">Open Source paper wallet designs in fixed nominations</h1>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+      <h3>Create one</h3>
+      <p>Generate your paper wallet
+        <a href="http://encryptedbitcoinwallet.com">at EncryptedBitcoinWallet.com</a>
+      </p>
+      <p>Want to use these designs for your project?
+        <a href="{{ site.baseurl }}/about.html">Talk to me.</a>
+      </p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      <h3>Download the project</h3>
+      <p>This project is fully GitHub hosted, including this page.</p>
+      <ul>
+        <li>
+          <a href="https://github.com/ajkochanowicz/bitcoinbills">GitHub Page</a>
+        </li>
+        <li>
+          <a href="https://github.com/ajkochanowicz/bitcoinbills/releases">Download a Release</a>
+          <ul>
+            <li>Raw assets: See the "raw" directory.</li>
+            <li>Exported images: See the "raw/export" directory.</li>
+          </ul>
+        </li>
+      </ul>
 
-</div>
+    </article>
+    <img class="bills" src="https://ip.bitcointalk.org/?u=http%3A%2F%2Fi.imgur.com%2FkjVQLxe.png&t=539&c=dVj7G49uAilL2w" />
+  </div>
+
+</section>

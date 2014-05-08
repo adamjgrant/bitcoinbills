@@ -1,8 +1,130 @@
 // ---
 // ---
 
-// Uncomment the above when jekyll is working again.
+// Uncomment above when Jekyll has been updated.
+@import _normalize
+@import _variables
+@import _mixins
 
-// start content
+*
+  box-sizing: border-box
+
+// TYPOGRAPHY
+h1, h2, h3
+  font-family: $font-headings
+  font-weight: bold
+h4, h5
+  font-family: $font-paragraph
+  font-weight: bold
+a
+  color: $blue
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+h1.lead
+  font-weight: 100
+
+// WRAPPING
 body
-  background-color: red
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  padding-top: 50px
+  @media (min-width: $size-tablet)
+    padding-top: 0
+
+body > main
+  flex: 1
+
+.wrapper
+  width: 100%
+  max-width: 1000px
+  padding: 15px
+  margin: 0px auto
+
+// NAVIGATION
+
+.site-nav
+  @include navbar()
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: white
+  @media (min-width: $size-tablet)
+    position: static
+
+.site-nav
+  border: 0
+  border-bottom: 1px solid #AAA
+
+.row, .site-footer
+  @include row()
+
+.site-footer
+  border-top: 1px solid #AAA
+  .about, .links
+    padding-top: 15px
+    @include col(12)
+  .about
+    @include col(6, $size-tablet)
+  .links
+    @include col(3, $size-tablet)
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      .icon svg
+        width: 25px
+        height: 25px
+        vertical-align: middle
+        display: inline-block
+        + a
+          display: inline-block
+
+.disclosed
+  @media (max-width: $size-tablet)
+    display: none
+    &.show
+      display: list-item
+
+// CONTENT
+
+.site-title
+  text-align: center
+  @media (min-width: $size-laptop)
+    text-align: left
+
+.home
+  .bills
+    @include col(12)
+    @include col(6, $size-tablet)
+    @include col(2, $size-laptop)
+  article
+    @include col(12)
+    @include col(6, $size-tablet)
+    @include col(10, $size-laptop)
+
+ul.posts
+  list-style: none
+  padding: 0
+  li
+    padding-bottom: 25px
+    a
+      padding: $navbarItemPadding 0
+    .post-date, .post-link
+      display: block
+    .post-date
+      font-size: 75%
+.menu-link
+  position: fixed
+  top: $navbarPadding
+  right: $navbarPadding
+  @media (min-width: $size-tablet)
+    display: none
+
+
+// ONE OFF NONSENSE
+
+.github iframe
+  margin-top: 20px !important
