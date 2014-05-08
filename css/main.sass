@@ -19,6 +19,10 @@ h4, h5
 a
   color: $blue
   text-decoration: none
+  &:hover
+    text-decoration: underline
+h1.lead
+  font-weight: 100
 
 // WRAPPING
 body
@@ -84,6 +88,19 @@ body > main
     @include col(12)
     @include col(6, $size-tablet)
     @include col(10, $size-laptop)
+
+ul.posts
+  list-style: none
+  padding: 0
+  li
+    padding-bottom: 25px
+    a
+      padding: $navbarItemPadding 0
+    .post-date, .post-link
+      display: block
+    .post-date
+      font-size: 75%
+
 
 // ONE OFF NONSENSE
 

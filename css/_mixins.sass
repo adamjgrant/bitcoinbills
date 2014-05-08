@@ -45,7 +45,7 @@
   p
     margin: 0 0
   ul
-    margin: $navbarPadding ($navbarPadding - $navbarItemPadding)
+    margin: 0 ($navbarPadding - $navbarItemPadding)
     padding: 0
     flex-wrap: wrap
     display: inline-flex
@@ -55,3 +55,10 @@
     li
       list-style: none
       margin: 0px $navbarItemPadding
+      flex: 1 1 100%
+      @media (min-width: $size-tablet)
+        flex-basis: auto
+      > *
+        padding-top: $navbarPadding
+        padding-bottom: $navbarPadding
+        display: block

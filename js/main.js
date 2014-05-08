@@ -1,0 +1,1 @@
+(function(){var n,e;n=function(n){var e,r,t,l,c;for(c=[],t=0,l=n.length;l>t;t++)e=n[t],r=String(e.innerHTML),c.push(r?e.innerHTML=r.replace(new RegExp("((?:[^ ]* ){"+(r.match(/\s/g).length-1)+"}[^ ]*) "),"$1&nbsp;"):void 0);return c},e=document.querySelectorAll("h1"),n(e)}).call(this);
