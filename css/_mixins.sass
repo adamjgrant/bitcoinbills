@@ -1,0 +1,64 @@
+@mixin row()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: top
+  align-content: space-around
+
+// Helpers to the column/offset maker, don't directly use these...
+@mixin make-col($x)
+  width: calc(100% * (#{$x}/#{$columns}) - (2 * #{$gutterWidth}))
+  word-wrap: break-word
+
+@mixin make-offset($x)
+  margin-left: calc(100% * (#{$x}/#{$columns}) + (2 * #{$gutterWidth}))
+
+// ...use these
+
+@mixin col($x, $width:"")
+  @if $width != ""
+    @media (min-width: $width)
+      @include make-col($x)
+  @else
+    @include make-col($x)
+
+@mixin offset($x, $width:"")
+  @if $width != ""
+    @media (min-width: $width)
+      @include make-offset($x)
+  @else
+    @include make-offset($x)
+
+@mixin navbar()
+  display: inline-flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-content: space-between
+  width: 100%
+  border: 1px solid
+  padding: 0
+  p
+    margin: 0 0
+  ul
+    margin: 0 ($navbarPadding - $navbarItemPadding)
+    padding: 0
+    flex-wrap: wrap
+    display: inline-flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    li
+      list-style: none
+      margin: 0px $navbarItemPadding
+      flex: 1 1 100%
+      @media (min-width: $size-tablet)
+        flex-basis: auto
+      > *
+        padding-top: $navbarPadding
+        padding-bottom: $navbarPadding
+        display: block
