@@ -6,7 +6,8 @@ description: Printable Bitcoin Wallets in fixed denominations set in beautiful d
 username: ajkochanowicz
 twitter_username: yourwebsitesUX
 # Once Github updates to Jekyll 2, change baseurl to ""
-baseurl: "/bitcoinbills"
+baseurl: ""
+# baseurl: "/bitcoinbills"
 url: "http://ajkochanowicz.github.io/bitcoinbills/"
 
 # Build settings
