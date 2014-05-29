@@ -13,4 +13,4 @@ url: "http://ajkochanowicz.github.io/bitcoinbills/"
 markdown: kramdown
 permalinks: pretty
 sass:
-  sass_dir: css
+  sass_dir: _sass
