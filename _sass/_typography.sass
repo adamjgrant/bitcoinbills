@@ -1,0 +1,39 @@
+// Lato font, using only some styles for max page speed.
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400)
+// Montserrat
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400)
+
+$font-headings:      'montserrat', 'adelle', sans-serif
+$font-paragraph:     'lato', 'helvetica neue', sans-serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-headings
+  font-weight: 400
+  margin: 0
+
+=xl_heading
+  font-size: 2rem
+  line-height: 2.4rem
+  margin-bottom: 1.5rem
+
+=lg_heading
+  font-size: 1.6rem
+  line-height: 2rem
+  margin-bottom: 1.2rem
+
+=md_heading
+  font-size: 1.3rem
+  margin-bottom: 0.5rem 
+
+p
+  margin-bottom: 1rem
+
+a
+  color: $blue
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+section.home
+  h1
+    +xl_heading

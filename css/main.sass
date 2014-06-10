@@ -5,6 +5,7 @@
 // @import _normalize
 @import _variables
 @import _mixins
+@import _typography
 
 html
   font-family: $font-paragraph
@@ -16,37 +17,8 @@ html
 *
   box-sizing: border-box
 
-// TYPOGRAPHY
-h1, h2, h3, h4, h5, p
-  margin: 0
-
-h1, h2, h3, h4, h5
-  font-family: $font-headings
-  font-weight: 400 
-  letter-spacing: normal
-
-h1
-  line-height: 2.4rem
-  margin-bottom: 1.5rem
-  font-size: 2rem
-
-h2
-  font-size: 1.6rem
-  line-height: 2rem
-  margin-bottom: 1.2rem
-
-h3
-  font-size: 1.3rem
-  margin-bottom: 0.5rem
-
 p
   margin-bottom: 1rem
-
-a
-  color: $blue
-  text-decoration: none
-  &:hover
-    text-decoration: underline
 
 // WRAPPING
 body
@@ -116,11 +88,6 @@ body > main
       display: list-item
 
 // CONTENT
-
-.site-title
-  text-align: center
-  @media (min-width: $size-laptop)
-    text-align: left
 
 .home
   .bills
