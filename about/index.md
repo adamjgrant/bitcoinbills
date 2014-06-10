@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## Get in touch with me
+# Get in touch with me
 
 * [Homepage](http://adamux.com)
 * [Twitter](http://twitter.com/yourwebsitesux)
