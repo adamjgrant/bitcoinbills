@@ -23,10 +23,31 @@ h1, h2, h3, h4, h5, h6
 
 =md_heading
   font-size: 1.3rem
-  margin-bottom: 0.5rem 
+  line-height: 1.6rem
+  margin-bottom: 1rem 
+
+=sm_heading
+  font-size: 1rem
+  margin-bottom: 0.25rem 
+
+=xs_heading
+  font-size: 0.85rem
+  margin-bottom: 0.25rem 
+
+=xxs_heading
+  font-size: 0.7rem
+  margin-bottom: 0.25rem 
 
 p
+  margin: 0
   margin-bottom: 1rem
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5,
+  + h6
+    margin-top: 2rem
 
 a
   color: $blue
@@ -34,6 +55,31 @@ a
   &:hover
     text-decoration: underline
 
-section.home
+.site-nav
   h1
-    +xl_heading
+    +sm_heading
+    margin-bottom: 0
+
+section.page
+  header 
+    h1
+      +xl_heading
+      text-align: center
+
+section.home 
+  h2
+    +md_heading
+
+  h3
+    +sm_heading
+
+section.blog
+  h2
+    +xxs_heading
+
+  h3, h4
+    +sm_heading
+
+.site-footer
+  h1
+    +md_heading 

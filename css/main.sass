@@ -6,6 +6,7 @@
 @import _variables
 @import _mixins
 @import _typography
+@import _grid
 
 html
   font-family: $font-paragraph
@@ -25,10 +26,11 @@ body
   display: flex
   min-height: 100vh
   flex-direction: column
-  padding-top: 50px
+  padding-top: 60px
   font-family: $font-paragraph
   font-size: 1rem
-  @media (min-width: $size-tablet)
+  overflow-x: hidden
+  @media (min-width: $tablet)
     padding-top: 0
 
 body > main
@@ -49,7 +51,7 @@ body > main
   left: 0
   right: 0
   background-color: white
-  @media (min-width: $size-tablet)
+  @media (min-width: $tablet)
     position: static
 
 .site-nav
@@ -63,12 +65,11 @@ body > main
   border-top: 1px solid #AAA
   .about, .links
     padding-top: 15px
-    @include col(12)
   .about
-    @include col(6, $size-tablet)
+    +column('half')
   .links
-    @include col(4, $size-tablet)
-    @include col(2, $size-laptop)
+    +column('third')
+
     ul
       list-style: none
       padding: 0
@@ -82,22 +83,12 @@ body > main
           display: inline-block
 
 .disclosed
-  @media (max-width: $size-tablet)
+  @media (max-width: $tablet)
     display: none
     &.show
       display: list-item
 
 // CONTENT
-
-.home
-  .bills
-    @include col(12)
-    @include col(6, $size-tablet)
-    @include col(2, $size-laptop)
-  article
-    @include col(12)
-    @include col(6, $size-tablet)
-    @include col(10, $size-laptop)
 
 ul.posts
   list-style: none
@@ -114,7 +105,7 @@ ul.posts
   position: fixed
   top: $navbarPadding
   right: $navbarPadding
-  @media (min-width: $size-tablet)
+  @media (min-width: $tablet)
     display: none
 
 

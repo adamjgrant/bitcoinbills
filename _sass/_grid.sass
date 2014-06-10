@@ -1,0 +1,36 @@
+$gutter: 30px
+
+=row
+  margin:
+    left: -$gutter
+    right: -$gutter
+  display: block
+  clear: both
+
+=set-columns($columns, $offset)
+  float: left
+  padding:
+    left: $gutter 
+    right: $gutter
+  margin: $offset/12 * 100%
+  width: $columns/12 * 100%
+
+=column($type, $offset: 0)
+  +set-columns(12, $offset)
+  @if "half"
+    @media screen and (min-width: $tablet)
+      +set-columns(6, 0)
+
+    @media screen and (min-width: $desktop)
+      +set-columns(6, $offset)
+
+  @else if "third" 
+    @media screen and (min-width: $tablet)
+      +set-columns(6, 0)
+
+    @media screen and (min-width: $desktop)
+      +set-columns(4, $offset)
+
+  @else
+    +set-columns($type, $offset)
+
