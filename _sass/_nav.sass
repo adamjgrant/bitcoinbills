@@ -1,0 +1,21 @@
+.site-nav
+  @include navbar()
+  background-color: $bitcoin-orange
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  border: 0
+
+  h1, a
+    color: white
+    font-size: 0.75rem
+
+.row, .site-footer
+  @include row()
+
+.disclosed
+  @media (max-width: $tablet)
+    display: none
+    &.show
+      display: list-item

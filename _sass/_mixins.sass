@@ -1,4 +1,8 @@
-@mixin navbar()
+=media($size)
+  @media screen and (min-width: $size)
+    @content
+
+=navbar()
   display: inline-flex
   flex-wrap: wrap
   justify-content: space-between

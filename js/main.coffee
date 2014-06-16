@@ -1,5 +1,6 @@
 ---
 ---
+
 # Mobile Menu Navigation
 
 menuLink = (document.querySelectorAll('.menu-link'))[0]

@@ -1,0 +1,27 @@
+.site-footer
+  padding-bottom: 30px
+  margin-bottom: -30px
+  background: #333
+  border-top: 1px solid #AAA
+  overflow: hidden
+  .about, .links
+    padding-top: 15px
+  .about
+    +column('half')
+  .links
+    +column('third')
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      .icon svg
+        width: 25px
+        height: 25px
+        vertical-align: middle
+        display: inline-block
+        + a
+          display: inline-block
+
+  h1, h2, h3, h4, h5, h6, p, a
+    color: #DDD

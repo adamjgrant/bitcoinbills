@@ -63,8 +63,11 @@ a
 section.page
   header 
     h1
-      +xl_heading
+      +lg_heading
       text-align: center
+
+      +media($phablet)
+        +xl_heading
 
 section.home 
   h2
@@ -73,18 +76,29 @@ section.home
   h3
     +sm_heading
 
-section.blog
+.site-footer
+  h1
+    +md_heading 
+
+// Blog
+
+section.blog-index
   h2
     +xxs_heading
 
   h3, h4
     +sm_heading
 
-.site-footer
-  h1
-    +md_heading 
+section.blog-single 
+  .post-header
+    h1
+      +lg_heading
+      word-wrap: break-word
+      text-align: center
 
-section.general
+    .meta
+      +xxs_heading
+
   .post-content
     h1
       +sm_heading
