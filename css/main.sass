@@ -7,6 +7,8 @@
 @import _mixins
 @import _typography
 @import _grid
+@import _footer
+@import _nav
 
 html
   font-family: $font-paragraph
@@ -42,51 +44,6 @@ body > main
   padding: 15px
   margin: 0px auto
 
-// NAVIGATION
-
-.site-nav
-  @include navbar()
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  background-color: white
-
-.site-nav
-  border: 0
-  border-bottom: 1px solid #AAA
-
-.row, .site-footer
-  @include row()
-
-.site-footer
-  border-top: 1px solid #AAA
-  overflow: hidden
-  .about, .links
-    padding-top: 15px
-  .about
-    +column('half')
-  .links
-    +column('third')
-
-    ul
-      list-style: none
-      padding: 0
-      margin: 0
-      .icon svg
-        width: 25px
-        height: 25px
-        vertical-align: middle
-        display: inline-block
-        + a
-          display: inline-block
-
-.disclosed
-  @media (max-width: $tablet)
-    display: none
-    &.show
-      display: list-item
-
 // CONTENT
 
 ul.posts
@@ -106,7 +63,6 @@ ul.posts
   right: $navbarPadding
   @media (min-width: $tablet)
     display: none
-
 
 // ONE OFF NONSENSE
 
