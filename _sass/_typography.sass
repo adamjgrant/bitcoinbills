@@ -16,33 +16,41 @@ h1, h2, h3, h4, h5, h6
   font-size: 4rem
   line-height: 4.1rem
   margin-bottom: 2.5rem
+  font-family: $font-headings
   
 =xl_heading
   font-size: 2rem
   line-height: 2.4rem
   margin-bottom: 1.5rem
+  font-family: $font-headings
 
 =lg_heading
   font-size: 1.6rem
   line-height: 2rem
   margin-bottom: 1.2rem
+  font-family: $font-headings
 
 =md_heading
   font-size: 1.3rem
   line-height: 1.6rem
   margin-bottom: 1rem 
+  font-family: $font-headings
 
 =sm_heading
   font-size: 1rem
   margin-bottom: 0.25rem 
+  font-family: $font-headings
 
 =xs_heading
   font-size: 0.85rem
   margin-bottom: 0.25rem 
+  font-family: $font-headings
 
 =xxs_heading
   font-size: 0.7rem
   margin-bottom: 0.25rem 
+  text-transform: uppercase
+  font-family: $font-headings
 
 p, em, strong, li, table, td, tr, label
   color: hsl(48, 11%, 26%)
@@ -73,10 +81,15 @@ section.page
   header 
     h1
       +lg_heading
+      word-wrap: break-word
       text-align: center
 
-      +media($phablet)
+      +media($tablet)
+        text-align: left
         +xl_heading
+
+      +media($desktop)
+        +xxl_heading
 
 section.home 
   h2
@@ -99,21 +112,10 @@ section.blog-index
     +sm_heading
 
 section.blog-single 
-  .post-header
-    h1
-      +lg_heading
-      word-wrap: break-word
-      text-align: center
-
-      +media($tablet)
-        text-align: left
-        +xl_heading
-
-      +media($display)
-        +xxl_heading
-
+  .post-header 
     .meta
       +xxs_heading
+      color: #999
 
   .post-content
     h1
@@ -124,3 +126,23 @@ section.blog-single
 
     h3
       +xxs_heading
+
+    +media($tablet)
+      h1
+        +md_heading
+      
+      h2
+        +sm_heading
+
+      h3
+        +xs_heading
+
+    +media($tablet)
+      h1
+        +lg_heading
+      
+      h2
+        +md_heading
+
+      h3
+        +sm_heading

@@ -16,10 +16,14 @@
     margin: 0 ($navbarPadding - $navbarItemPadding)
     padding: 0
     flex-wrap: wrap
-    display: inline-flex
     justify-content: space-around
+    display: block
+    width: 100%
     align-items: center
     flex-wrap: wrap
+    @media (min-width: $tablet)
+      display: inline-flex
+      width: auto
     li
       list-style: none
       margin: 0px $navbarItemPadding

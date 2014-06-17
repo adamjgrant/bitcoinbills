@@ -11,7 +11,7 @@ With the help of at least one other software developer, these will soon be bills
 
 Skip to the bottom to learn why I created these and what happens next.
 
-## About the bills
+# About the bills
 
 Denominations of 1 and 5 times 10^x (e.g. BTC 0.001 or 0.005)
 Honors great men and women of science
@@ -28,6 +28,6 @@ B&W/GreyScale versions will be released for inexpensive offline printers
 
 I plan to release a total of 10 denominations. My next to design is the 1 BTC bill.
 
-## Developers and Makers
+# Developers and Makers
 
 I'm looking for devs and makers who want to use these designs in their projects. Get in touch with me!
