@@ -19,14 +19,14 @@ h1, h2, h3, h4, h5, h6
   font-family: $font-headings
   
 =xl_heading
-  font-size: 2rem
-  line-height: 2.4rem
+  font-size: 2.5rem
+  line-height: 3rem
   margin-bottom: 1.5rem
   font-family: $font-headings
 
 =lg_heading
-  font-size: 1.6rem
-  line-height: 2rem
+  font-size: 1.7rem
+  line-height: 2.1rem
   margin-bottom: 1.2rem
   font-family: $font-headings
 
@@ -92,11 +92,24 @@ section.page
         +xxl_heading
 
 section.home 
-  h2
+  h1
     +md_heading
 
-  h3
+  h2
     +sm_heading
+
+  h3
+    +xs_heading
+
+  +media($tablet)
+    h1
+      +lg_heading
+
+    h2
+      +md_heading
+
+    h3
+      +sm_heading
 
 .site-footer
   h1
