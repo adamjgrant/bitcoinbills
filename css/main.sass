@@ -9,6 +9,7 @@
 @import _grid
 @import _footer
 @import _nav
+@import _blog
 
 html
   font-family: $font-paragraph
@@ -31,6 +32,9 @@ body
   font-family: $font-paragraph
   font-size: 1rem
   overflow-x: hidden
+
+  +media($desktop)
+    padding-top: 100px
 
 body > main
   flex: 1
